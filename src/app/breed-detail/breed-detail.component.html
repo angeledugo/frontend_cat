@@ -1,0 +1,9 @@
+<div *ngIf="breed">
+    <h1>{{ breed.name }}</h1>
+    <p>{{ breed.description }}</p>
+    <mat-grid-list cols="3" rowHeight="200px" *ngIf="images.length">
+      <mat-grid-tile *ngFor="let image of images">
+        <img [src]="image.url" alt="{{ breed.name }}" style="width: 100%; height: 100%;">
+      </mat-grid-tile>
+    </mat-grid-list>
+  </div>

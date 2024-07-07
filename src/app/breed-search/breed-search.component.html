@@ -1,0 +1,13 @@
+<div>
+    <h1>Search Cat Breeds</h1>
+    <mat-form-field appearance="fill">
+      <mat-label>Enter breed name</mat-label>
+      <input matInput [(ngModel)]="query">
+    </mat-form-field>
+    <button mat-raised-button color="primary" (click)="search()">Search</button>
+    <mat-nav-list *ngIf="breeds.length">
+      <a mat-list-item *ngFor="let breed of breeds" [routerLink]="['/breeds', breed.id]">
+        {{ breed.name }}
+      </a>
+    </mat-nav-list>
+  </div>

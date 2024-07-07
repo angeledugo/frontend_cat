@@ -1,0 +1,8 @@
+<div>
+    <h1>Cat Breeds</h1>
+    <mat-nav-list>
+      <a mat-list-item *ngFor="let breed of breeds" [routerLink]="['/breeds', breed.id]">
+        {{ breed.name }}
+      </a>
+    </mat-nav-list>
+  </div>
